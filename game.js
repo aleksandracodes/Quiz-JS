@@ -3,7 +3,8 @@ const choices = Array.from(document.getElementsByClassName('choice-text'));
 const progressText = document.getElementById('progress-text');
 const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progress-bar-full');
-
+const loader = document.getElementById('loader');
+const game = document.getElementById('game');
 
 let currentQuestion = {};
 let acceptingAnswers = false
@@ -37,6 +38,7 @@ fetch(
 
             return formattedQuestion;
         });
+
         startGame();
     })
     .catch((err) => {
@@ -52,6 +54,8 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     getNewQuestion();
+    game.classList.remove('hidden');
+    loader.classList.add('hidden'); // removes the loader effect
 };
 
 getNewQuestion = () => {
