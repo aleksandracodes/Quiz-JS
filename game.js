@@ -7,7 +7,6 @@ let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
 
-
 /* Each question is an object which contains a question, choices 1-4 and a correct answer*/
 let questions = [
     {
@@ -36,3 +35,16 @@ let questions = [
         answer: 4,
     },
 ];
+
+const CORRECT_BONUS = 10; // How much is it worth if you quess the answer
+const MAX_QUESTIONS = 3; // How many questions does the user get before they finish
+
+startGame = () => {
+    questionCounter = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    console.log(availableQuestions)
+};
+
+
+startGame();
