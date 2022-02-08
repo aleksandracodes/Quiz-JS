@@ -46,7 +46,6 @@
 
 .qs-count-main-text {
   text-align: center;
-  font-size: 4rem;
   }
 
   /* Progress Bar */
@@ -54,6 +53,7 @@
     width: 20rem;
     height: 4rem;
     border: 0.3rem solid #56a5eb;
+    margin-top: 1rem;
   }
 
   #progress-bar-full {
