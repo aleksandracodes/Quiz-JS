@@ -2,7 +2,7 @@ const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 let currentQuestion = {};
-let acceptingAnswers = true
+let acceptingAnswers = false
 let score = 0;
 let questionCounter = 0;
 let availableQuestion = [];
@@ -55,6 +55,14 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
+
+    choices.forEach((choice) => {
+        const number = choice.dataset['number']; // Reference to data-number in html file
+        choice.innerText = currentQuestion['choice' + number];
+    });
+
+    availableQuestions.splice(questionIndex, 1); // Remove the used question from the questions array
+    acceptingAnswers = true;
 };
 
 startGame();
