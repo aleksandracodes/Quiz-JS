@@ -47,7 +47,7 @@ fetch(
 
 
 const CORRECT_BONUS = 10; // How much is it worth if you quess the answer
-const MAX_QUESTIONS = 3; // How many questions does the user get before they finish
+const MAX_QUESTIONS = 10; // How many questions does the user get before they finish
 
 startGame = () => {
     questionCounter = 0;
