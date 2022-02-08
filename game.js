@@ -43,8 +43,18 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    console.log(availableQuestions)
+    getNewQuestion();
 };
 
+getNewQuestion = () => {
+    if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+        //go to the end page
+        return window.location.assign('/end.html');
+    }
+    questionCounter++;
+    const questionIndex = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[questionIndex];
+    question.innerText = currentQuestion.question;
+};
 
 startGame();
