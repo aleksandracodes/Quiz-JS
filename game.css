@@ -32,3 +32,19 @@
   .incorrect {
     background-color: #dc3545;
   }
+
+  /* Section with question and score count */
+  #qs-count {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .qs-count-prefix {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+.qs-count-main-text {
+  text-align: center;
+  font-size: 4rem;
+  }
