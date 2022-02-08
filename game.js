@@ -1,5 +1,5 @@
-const question = document.getElementById("question");
-const choices = Array.from(document.getElementsByClassName("choice-text"));
+const question = document.getElementById('question');
+const choices = Array.from(document.getElementsByClassName('choice-text'));
 
 let currentQuestion = {};
 let acceptingAnswers = false
@@ -64,5 +64,17 @@ getNewQuestion = () => {
     availableQuestions.splice(questionIndex, 1); // Remove the used question from the questions array
     acceptingAnswers = true;
 };
+
+choices.forEach((choice) => {
+    choice.addEventListener('click', (e) => {
+        if (!acceptingAnswers) return;
+
+        acceptingAnswers = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset['number'];
+        console.log(selectedAnswer);
+        getNewQuestion();
+    });
+});
 
 startGame();
