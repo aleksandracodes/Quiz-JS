@@ -3,3 +3,7 @@ A project coded by Aleksandra Haniok based on the Udemy Course ['Build-A-Quiz-Ap
 created by James Quick.
 
 [Visit live website](https://aleksandracodes.github.io/Quiz-JS)
+
+![Screenshot-index](docs/screenshot-index.png)
+![Screenshot-game](docs/screenshot-game.png)
+![Screenshot-end](docs/screenshot-end.png)
