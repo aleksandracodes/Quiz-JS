@@ -28,5 +28,5 @@ saveHighScore = e => {
     highScores.splice(5); // cuts off the rest of scores > 5
 
     localStorage.setItem('highScores', JSON.stringify(highScores)); // Permanently save scores
-    window.location.assign('/');
+    window.location.assign('index.html');
 }
